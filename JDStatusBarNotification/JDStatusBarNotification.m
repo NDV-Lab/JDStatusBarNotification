@@ -218,7 +218,6 @@
     self.topBar.textVerticalPositionAdjustment = style.textVerticalPositionAdjustment;
     UILabel *textLabel = self.topBar.textLabel;
     textLabel.textColor = style.textColor;
-    if (style.textBackgroundColor) textLabel.backgroundColor = style.textBackgroundColor;
     textLabel.font = style.font;
     textLabel.accessibilityLabel = status;
     textLabel.text = status;

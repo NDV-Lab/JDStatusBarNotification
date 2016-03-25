@@ -42,9 +42,6 @@ typedef NS_ENUM(NSInteger, JDStatusBarProgressBarPosition) {
 /// The text color of the notification label
 @property (nonatomic, strong) UIColor *textColor;
 
-/// The background color of the notification label
-@property (nonatomic, strong) UIColor *textBackgroundColor;
-
 /// The text shadow of the notification label
 @property (nonatomic, strong) NSShadow *textShadow;
 

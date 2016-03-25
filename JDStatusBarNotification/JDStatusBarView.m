@@ -54,15 +54,14 @@
 - (void)layoutSubviews;
 {
     [super layoutSubviews];
-
-    CGSize textSize = [self currentTextSize];
-
+    
     // label
-    self.textLabel.frame = CGRectMake(self.bounds.size.width / 2 - textSize.width / 2, 1+self.textVerticalPositionAdjustment,
-                                      textSize.width, self.bounds.size.height-1);
+    self.textLabel.frame = CGRectMake(0, 1+self.textVerticalPositionAdjustment,
+                                      self.bounds.size.width, self.bounds.size.height-1);
     
     // activity indicator
     if (_activityIndicatorView ) {
+        CGSize textSize = [self currentTextSize];
         CGRect indicatorFrame = _activityIndicatorView.frame;
         indicatorFrame.origin.x = round((self.bounds.size.width - textSize.width)/2.0) - indicatorFrame.size.width - 8.0;
         indicatorFrame.origin.y = ceil(1+(self.bounds.size.height - indicatorFrame.size.height)/2.0);
